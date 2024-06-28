@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Example Web Site</title>
+    <title>Mackenzie McClellan's Porfolio</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="src/style.css">
+    <meta http-equiv="X-UA-Compatible"/> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="main/src/style.css"/>
+    <link rel="stylesheet" href="main/src/mediaQueries.css"/>
   </head>
 
   <body>
-    <h1>
-      Hello, World!
-    </h1>
-
-    <div id="html-container">
-      <div id="html">
-        <h2>
-          HTML
-        </h2>
-        <p>
-          This text comes straight from the HTML file,
-          <strong>index.html</strong>.
-        </p>
+    <nav id="desktop-nav">
+      <div class="logo">Mackenzie McClellan</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <div id="css">
-        <h2>
-          CSS
-        </h2>
-        <p>
-          The styling is all controlled by the
-          <strong>styles.css</strong> file.
-        </p>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Mackenzie McClellan</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
       </div>
-    </div>
-
-    <div id="js-container"></div>
-
-    <script src="src/index.js"></script>
+    </nav>
+    <section id="profile">
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Mackenzie McClellan</h1>
+        <p class="section__text__p2">Backend Developer</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2">Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+        </div>
+        <div id="socials-container">
+          <img src="main/src/pictures/linkedIn.webp" alt="My LinkedIn Profle" class="icon" onclick="location.href='https://www.linkedin.com/in/mackenziemcclellan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'">
+          <img src="main/src/pictures/github.png" alt="My Github Profle" class="icon" onclick="location.href='https://github.com/mackenziemcclellan'">
+      
+        </div>
+      </div>
+      <div class="section_pic-container">
+        <img src="main/src/pictures/headshot-modified.png" alt="Mackenzie McClellan profile picture">
+      </div>
+    </section>
+    <script src="main/src/index.js"></script>
   </body>
 </html>
